@@ -126,9 +126,6 @@ menu {
   }
   .product {
     border: 1px solid #eee;
-    &.wide {
-      grid-column: 1/4;
-    }
     .images {
       width: 100%;
       img {
