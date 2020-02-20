@@ -57,7 +57,6 @@ menu {
   grid-template-columns: repeat(6, auto);
   grid-gap: 10px;
   padding: 0;
-  margin: 0 0 40px 0;
   .menu-depth-0 {
     position: relative;
     &:hover .menu-depth-1 {
@@ -101,38 +100,62 @@ menu {
 }
 .catalog {
   margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  grid-gap: 20px;
   h2 {
     text-transform: uppercase;
-    margin-bottom: -10px;
+    grid-column: 1/4;
+    margin: 30px 0 -30px 0;
+  }
+  h3 {
+    grid-column: 1/4;
+    background: $main;
+    color: white;
+    font-size: 16px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    margin: 40px 0 20px;
+    font-weight: normal;
+    font-size: 16px;
+    white-space: nowrap;
+    width: min-content;
   }
   .product {
-    h3 {
-      padding-top: 10px;
+    border: 1px solid #eee;
+    &.wide {
+      grid-column: 1/4;
     }
     .images {
+      width: 100%;
       img {
-        max-height: 86px;
+        max-width: 100%;
       }
+    }
+    h4 {
+      margin: 10px;
+      height: 36px;
     }
     table {
       margin-top: 10px;
       border-collapse: collapse;
-      thead {
-        th {
-          border: 2px solid $main;
-          background: $main;
-          color: white;
-          padding: 2px 8px;
-          font-weight: normal;
-          font-size: 16px;
-          white-space: nowrap;
-        }
+      width: 100%;
+      th {
+        border: 2px solid $light;
+        background: $light;
+        color: white;
+        padding: 2px 8px;
+        font-weight: normal;
+        font-size: 14px;
       }
       td {
-        border: 2px solid $main;
+        border: 2px solid $light;
         padding: 4px 8px;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
         &.nowrap {
           white-space: nowrap;
